@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Application Form</h1>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fname">First Name</label>
+            <input type="text" placeholder="First Name" required><br/><br>
+            <label for="lname">Last Name</label>
+            <input type="text" placeholder="Last Name"><br/><br>
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">Female
+            <input type="radio" name="gender">Other <br/><br/>
+            <label for="dob">Date Of Birth</label>
+            <input type="date"><br/><br>
+            <label for="nat">Nationality</label>
+            <select>
+                <option>select</option>
+                <option>India</option>
+                <option>America</option>
+                <option>England</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="email">Email</label>
+            <input type="email" placeholder="example@example.com"><br><br>
+            <label for="ph">Phone Number</label>
+            <input type="number" placeholder="10-digit-number"><br><br>
+            <label for="add">Address</label><br>
+            <textarea rows="5" cols="100"></textarea><br><br>
+            <label for="city">City</label>
+            <input type="text"><br><br>
+            <label for="zip">Zip Code</label>
+            <input type="number" size="5" placeholder="5-digit-zip">
+
+        </fieldset>
+        <fieldset>
+            <legend>Education</legend>
+            <label for="edu">Highest Education Level</label>
+            <select>
+                <option>Select</option>
+                <option>B.E/B.Tech</option>
+                <option>B.com</option>
+                <option>B.A</option>
+            </select><br><br>
+            <label for="skills">Skills(select multiple)</label><br>
+            <select multiple>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+                <option>Python</option>
+                <option>Java</option>
+            </select>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Work Experience</legend>
+            <p>Are you Currently Employed?</p>
+            <input type="radio" name="emp">Yes
+            <input type="radio" name="emp">No
+            <label for="cpc">Current/Previous Company Name</label>
+            <input type="text"><br><br>
+            <label for="job">Job Position</label>
+            <input type="text"><br><br>
+            <label for="yoe">Years of Experience</label>
+            <input type="number"><br><br>
+            <label for="ur">Upload Resume</label>
+            <input type="file">
+        </fieldset>
+
+        <fieldset>
+            <legend>Terms & Conditions</legend>
+            <input type="checkbox">I agree to the Terms and Conditions
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
