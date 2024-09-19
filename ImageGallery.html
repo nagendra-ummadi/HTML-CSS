@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Images/logo.jpg">
+    <title>Gallery</title>
+    <style>
+        .mydiv{
+            width: 100vw;
+            display: flex;
+            flex-wrap: wrap;
+           
+            
+            
+        }
+        .row {
+            display: flex;
+            margin: 10px;
+
+        }
+
+        img {
+            width: 200px;
+            height: 300px;
+            padding: 7px;
+            border-radius: 30px;
+            filter: grayscale();
+
+        }
+
+        img:hover {
+            box-shadow: 3px 3px 3px;
+            filter: brightness(120%);
+            transform: scale(105%);
+        }
+        
+
+    </style>
+</head>
+
+<body>
+
+    <div class="mydiv">
+    <div class="container" style="margin: auto;">
+        <h1 align="center">My Gallery</h1>
+        <div id="container">
+            <div class="row">
+                <img src="Images/gal1.jpg" alt="picture1" />
+                <img src="Images/gal2.jpg" alt="picture1" />
+                <img src="Images/gal3.jpg" alt="picture1" />
+            </div>
+
+            <div class="row">
+                <img src="Images/gal6.jpg" alt="picture1" />
+                <img src="Images/gal7.jpg" alt="picture1" />
+                <img src="Images/gal8.jpg" alt="picture1" />
+
+            </div>
+            <div class="row">
+                <img src="Images/gal4.jpg" alt="picture1" />
+                <img src="Images/gal5.jpg" alt="picture1" />
+                <img src="Images/gal2.jpg" alt="picture1" />
+
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>
