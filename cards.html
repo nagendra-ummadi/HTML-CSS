@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            background-color: hsl(30, 38%, 92%);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30vh;
+        }
+
+        .card {
+            width: 500px;
+            height: 300px;
+            border: none;
+            box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+            border-radius: 15px 15px;
+            background-color: white;
+        }
+
+        .item img {
+            width: 40%;
+            height: 300px;
+            position: relative;
+            float: left;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        h2 {
+            font-variant: small-caps;
+            font-size: x-large;
+            color: #d4d0d0;
+        }
+
+        button {
+            width: 100%;
+            height: 35px;
+            background-color: #5aac5a;
+            color: white;
+            justify-content: center;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+        }
+
+        span.cost {
+            font-size: x-large;
+            font-weight: bold;
+            color: hsl(158, 36%, 37%);
+        }
+
+        span.original {
+            font-size: medium;
+            font-weight: 200;
+            color: hsl(228, 12%, 48%);
+        }
+        .card .description{
+            border: none;
+            float: left;
+            margin-left: 15px;
+            width: 50%;
+            height: 250px;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="item">
+                <img src="Images/mug.jpg" alt="item-mug">
+            </div>
+
+            <div class="description">
+                <h2> Coffee Mug</h2>
+                <h2>White Coffee Mug</h2>
+                <p>Coffee mugs are designed to express emotions.
+                    These are acclaimed for amazing designs & superior quality.
+                </p>
+                <span class="cost">&#8377;149</span>
+                <span class="original"><del>&#8377;230</del></span><br><br>
+
+                <button>Add to Cart</button>
+                
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
