@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+.spin{
+    width : 100px;
+    height: 70px;
+    border-color: rgb(55, 192, 14);
+    margin-top: 50vh;
+    border-width: 10px;
+    margin-left: 50vw;
+}
+.dot1{
+    border-width : 5px;
+    border-radius: 50%;
+    border-color:rgb(77, 111, 212)
+}
