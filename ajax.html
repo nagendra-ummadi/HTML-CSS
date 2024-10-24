@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: 500px;
+            height: auto;
+            background-color: #2b2b2b;
+            box-shadow: 5px 5px 3px #fff;
+
+        }
+
+        .container input {
+            margin-top: 40px;
+            height: 30px;
+            width: 80%;
+            background-color: aliceblue;
+            border-radius: 15px;
+            margin: 30px 30px;
+        }
+
+        button {
+            background-color: #0000ab;
+            color: text;
+            width: 80%;
+            margin: 20px 30px;
+            padding: 10px;
+            border-radius: 15px;
+            color: #fff;
+        }
+
+        .container #getdata {
+            color: white;
+            width: 100%;
+            height: auto;
+            margin: 20px 50px;
+            transition: transform 3s;
+        }
+
+        /* .container #getdata:hover {
+            transform: scale(1.1);
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <input type="text" id="country" placeholder="Enter Country Name" />
+        </form>
+        <button type="submit" id="btn">Get Data</button>
+
+        <div id="getdata">
+        </div>
+    </div>
+
+    <script>
+        let data = document.getElementById('getdata');
+        let text = document.getElementById('country')
+        const btn = document.getElementById('btn');
+        let url = 'https://restcountries.com/v3.1/name/'
+
+        btn.addEventListener('click', getData)
+        function getData() {
+            if(text.value){
+                url += text.value
+            }
+            console.log(url)
+            let xhr = new XMLHttpRequest()
+            xhr.open('GET', url, true);
+            xhr.send()
+
+            
+            xhr.onload = function () {
+                let res = xhr.responseText
+                let result = JSON.parse(res)
+                console.log(result)
+                console.log(xhr.status)
+                if(xhr.status==200){
+                    data.innerHTML = `<h3>Country : ${text.value}</h3>
+                                <h3> Capital : ${result[0].capital}</h3>
+                                <img src=${result[0].flags.png}>`
+                    text.value = "";
+                    url = 'https://restcountries.com/v3.1/name/'
+                }
+                else{
+                    data.innerHTML = "No Data"
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
