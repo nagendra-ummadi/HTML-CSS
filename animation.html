@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .main {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            height: 150px;
+        }
+
+        .animation-1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 100px;
+            gap: 5px;
+        }
+
+        .child1,
+        .child2,
+        .child3,
+        .child4,
+        .child5,
+        .child6,
+        .child7,
+        .child8,
+        .child9 {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ff004f;
+        }
+
+        /* Add animations to each child element */
+        .child1 {
+            animation: shake 5s linear 0.3s infinite;
+        }
+
+        .child2 {
+            animation: shake 3s linear 0.1s infinite;
+        }
+
+        .child3 {
+            animation: shake 2s linear 0.5s infinite;
+        }
+
+        .child4 {
+            animation: shake 4s linear 0.2s infinite;
+        }
+
+        .child5 {
+            animation: shake 1s linear 0s infinite;
+        }
+
+        .child6 {
+            animation: shake 2s linear 0.3s infinite;
+        }
+
+        .child7 {
+            animation: shake 3s linear 0.5s infinite;
+        }
+
+        .child8 {
+            animation: shake 5s linear 0.2s infinite;
+        }
+
+        .child9 {
+            animation: shake 4s linear 0.1s infinite;
+        }
+
+        @keyframes shake {
+            0% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1.0;
+                transform: scale(1.1);
+            }
+
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+        }
+
+        .animation-2 {
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .line1,
+        .line2,
+        .line3,
+        .line4,
+        .line5 {
+            width: 5px;
+            height: 50%;
+            align-self: center;
+            border-radius: 10px;
+            background-color: #ff004f;
+        }
+
+        .line1 {
+            animation: load2 1.33s linear 0.4s infinite;
+        }
+
+        .line2 {
+            animation: load2 2s linear 0.2s infinite;
+        }
+
+        .line3 {
+            animation: load2 1s linear 0s infinite;
+        }
+
+        .line4 {
+            animation: load2 2.25s linear 0.2s infinite;
+        }
+
+        .line5 {
+            animation: load2 1.76s linear 0.4s infinite;
+        }
+
+        @keyframes load2 {
+            0% {
+                height: 50%;
+                opacity: 0.5;
+            }
+
+            100% {
+                height: 90%;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="animation-1">
+            <div class="child1"></div>
+            <div class="child2"></div>
+            <div class="child3"></div>
+            <div class="child4"></div>
+            <div class="child5"></div>
+            <div class="child6"></div>
+            <div class="child7"></div>
+            <div class="child8"></div>
+            <div class="child9"></div>
+        </div>
+        <div class="animation-2">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+            <div class="line5"></div>
+        </div>
+    </div>
+</body>
+
+</html>
